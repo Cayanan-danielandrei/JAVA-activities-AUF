@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.time;
+
 
 public class testprogram {
 
@@ -31,16 +33,20 @@ public static String lowercase(String word) {
         return word.toLowerCase();
     }
 
+static int addNumbers(int num1, int num2) {
+        return num1 + num2;
+    }
+
     // Main Body //
         public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
     // user input //
     System.out.println("-------------------------------");
     System.out.println("|     WELCOME TO WORD PLAY    |");
     System.out.println("-------------------------------");
     System.out.println("Please enter a word with at least three letters: ");
-    String originalword = input.nextLine();
+    String originalword = sc.nextLine();
     
     // parameters & arguments for user-defined methods //
     String lowercase = lowercase(originalword);
@@ -48,6 +54,8 @@ public static String lowercase(String word) {
     char firstletter = getFirstLetter(originalword);
     char secondletter = getSecondLetter(originalword);
     char thirdletter = getThirdLetter(originalword);
+    int num1 = 10; 
+    int num2 = 20;
 
     // random number generator //
     Random random = new Random();
@@ -63,6 +71,7 @@ public static String lowercase(String word) {
     System.out.println("Second Letter: " + secondletter);
     System.out.println("Third Letter: " + thirdletter);
     System.out.println("Random Number: " + randomnumber);
+    System.out.println("Returned Value: " + num1 + " + " + num2 + " = " + addNumbers(num1, num2));
     System.out.println("-------------------------------");
     }
 }
