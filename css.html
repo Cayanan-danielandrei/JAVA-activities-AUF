@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <title>BASIC CSS</title>
+    <body>
+        <form>
+            Name: <input type="text">
+                  <input type="submit" value="submit">
+                  <input type="Reset" value="Reset">     <br><br>                
+        Password: <input type="password">   
+                  <input type="submit" value="submit">
+                  <input type="Reset" value="Reset">
+            <p>
+            <hr size = "5" color = "black">
+            </p>
+            Favorite Color :<input type="checkbox" value="checkbox">RED 
+                            <input type="checkbox" value="checkbox">BLUE
+                            <input type="checkbox" value="checkbox">YELLOW
+                            <input type="checkbox" value="checkbox">GREEN
+
+            <p>
+            <hr size = "5" color = "black">
+            </p>
+
+            Courses: <input type="radio" id="BSCS" name="course" value="BSCS">
+                        <label for="BSCS"> BSCS </label>
+                     <input type="radio" id="BSIT" name="course" value="BSIT">
+                        <label for="BSIT"> BSIT </label>
+                     <input type="radio" id="BMMA" name="course" value="BMMA">
+                        <label for="BMMA"> BMMA </label>
+
+            <p>
+            <hr size = "5" color = "black">
+            </p>
+
+            PASSWORD: <input type="password">
+
+            <p>
+            <hr size = "5" color = "black">
+            </p>            
+
+            <label for="fname">FIRST NAME</label>
+            <br>    <input type="text" id="fname" value="DANIEL"> <br>
+            <label for="fname">LAST NAME</label>
+            <br>    <input type="text" id="fname" value="CAYANAN">                   
+            <br>    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+            <p>
+            <hr size = "5" color = "black">
+            </p>
+
+
+            </input>
+        </form>
+
+            <style>
+                .btn{
+                border: none;
+                background-color: inherit;
+                padding: 14px 28px;
+                font-size: 18px;
+                cursor: pointer;
+                display: inline-block;
+                }
+
+                /* Green */
+                .Profile{
+                color: green;
+                
+                }
+
+                .Profile:hover{
+                    background-color: rgb(211, 44, 44);
+                    color: rgb(197, 238, 12)
+
+                }
+                
+                /* Blue */
+
+                .About_Us{
+                color: rgb(7, 3, 238);
+                }
+
+                .About_Us:hover{
+                    background-color: rgb(218, 0, 247);
+                    color: rgb(250, 245, 250)
+                }
+
+                /* Orange */
+
+                .Contact_Us{
+                color: rgb(238, 185, 9);
+                }
+
+                .Contact_Us:hover{
+                    background-color: rgb(219, 187, 4);
+                    color: rgb(250, 245, 250)
+                    
+                }
+
+                 /* RED */
+
+                .AUF_CSS{
+                color: rgb(35, 54, 230);
+                }
+
+                .AUF_CSS:hover{
+                    background-color: rgb(231, 231, 10);
+                    color: rgb(245, 244, 241)
+                    
+                }               
+
+                 /* Royal Blue */
+
+                .Facebook{
+                color: royalblue;
+                }
+
+                .Facebook:hover{
+                    background-color: #4169E1;
+                    color: rgb(245, 244, 241)
+                    
+                } 
+
+            </style>
+
+
+
+            <h2>TEXT BUTTONS</h2>
+                This are sample Text Buttons with a specific background-color
+                color on HOVER:     
+            <br>
+            <button class="btn Profile">PROFILE</button>
+            <button class="btn About_Us">ABOUT US</button>
+            <button class="btn Contact_Us">CONTACT US</button>
+            <button class="btn AUF_CSS">AUF CSS</button>
+            <button class="btn Facebook"><a href="https://www.facebook.com"> FACEBOOK</a> </button>
+
+            <br>
+
+
+
+            <video width=400 controls>
+               <source src="Bunny.mp4" type="video/mp4"> 
+            </video>
+
+            <video width=300 autoplay muted>
+               <source src="Bunny.mp4" type="video/mp4"> 
+            </video>
+
+            <br>
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+            </audio>
+        <br><audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+            </audio>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>
+    <center> <font size="3" color="green">Cayanan Daniel Andrei S. </font></center>
+        </p>
+
+      <center> <font size="10">Patient Information Form</font> </center>
+
+      <br>
+      <form>
+
+       <center>Name: <br><input type="text" size="40"></center>
+       <center>Address: <br><input type="text" size="40"></center>
+       <center>Contact_No: <br><input type="text" size="40"></center>
+       <center>PHILHealth_No: <br><input type="text" size="40"></center>
+
+       <br>
+        <center><Font size="4">GENDER:</Font></center>
+        <center>MALE<input type="radio" id="GENDER" name="Male" value="Male"</center>
+        <center>FEMALE<input type="radio" id="GENDER" name="Female" value="Female"></center>
+        <center>OTHER<input type="radio" id="GENDER" name="Other" value="Other"></center>
+        <br>
+        <label for="dob"><font size="5">Date of Birth:</font></label><br>
+        <input type="date" id="dob" nae="dob" required>
+
+        <br><br><br>
+        <center>Medical History:</center>
+        <center><input type="checkbox" >Cancer</center>
+        <center><input type="checkbox" >Diabetes</center>
+        <center><input type="checkbox" >Hypertension</center>
+        <center><input type="checkbox" >Allergies</center>
+        <center><input type="checkbox" >Asthma</center>
+        <center><input type="checkbox" >Highblood Pressure</center>
+        <center><input type="checkbox" >Siezure</center>
+        <center><input type="checkbox" >Tubercolosis</center>
+        <center><input type="checkbox" >Stroke</center>
+        <center><input type="checkbox" >No Disease</center>
+
+      </form>
+
+       <style>
+                .btn{
+                border: none;
+                background-color: inherit;
+                padding: 10px 10px;
+                font-size: 18px;
+
+                cursor: pointer;
+                display: inline-block;
+                }
+
+                /* Green */
+                .Submit{
+                background-color: green;    
+                color: rgb(255, 255, 255);
+                
+                }
+
+                .Submit:hover{
+                    background-color: rgb(27, 214, 21);
+                    color: rgb(241, 241, 240)
+
+                }
+
+                /* RED */
+                .Reset{
+                background-color: rgb(235, 12, 12);    
+                color: rgb(255, 255, 255);
+                
+                }
+
+                .Reset:hover{
+                    background-color: rgb(245, 5, 5);
+                    color: rgb(241, 241, 240)
+
+                }
+        </style>    
+        <br><br>
+       <button class="btn Submit">Submit</button> <button class="btn Reset">Reset</button>
+
+    </body> 
+</html>
