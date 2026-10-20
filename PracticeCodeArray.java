@@ -18,6 +18,10 @@ public class PracticeCodeArray {
             System.out.println("3. Nicole");
             System.out.println("4. Gab");
             System.out.println("5. Marcus");
+            System.out.println("6. Kamillah");
+            System.out.println("7. Sean");
+            System.out.println("8. Nash");
+            System.out.println("9. Anton");
         }
         else if (choice == 2) {
             System.out.println("Exiting program...");
@@ -29,12 +33,12 @@ public class PracticeCodeArray {
     }
         } while (choice != 3);
 
-        String[] names = {"Daniel", "Jurwin", "Nicole", "Gab", "Marcus"};
-        int[] age = {22, 20, 18, 18, 18};
+        String[] names = {"Daniel", "Jurwin", "Nicole", "Gab", "Marcus", "Kamillah", "Sean", "Nash", "Anton"};
+        int[] age = {22, 20, 18, 18, 18, 19, 19, 18};
         String Course = "BSIT";
         String Year = "1st Year";
 
-        System.out.print("\nChoose a student (1-5): ");
+        System.out.print("\nChoose a student (1-8): ");
         int studentChoice = sc.nextInt();
 
         if (studentChoice >= 1 && studentChoice <= names.length) {
@@ -65,17 +69,13 @@ public class PracticeCodeArray {
                     System.out.println(grades[i] + " = Failed");
 
             }
-
-
-
         }
 
-
-
-
-
-
-
-
+            int total = 0;
+        for (int grade : grades) {
+                total += grade;
+            }
+            double average = (double) total / grades.length;
+            System.out.println("Average grade: " + average);
     }
 }
