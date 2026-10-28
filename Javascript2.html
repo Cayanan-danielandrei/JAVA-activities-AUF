@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                padding: 100px;
+                background-color: rgb(195, 196, 199);
+                transition: background-color 0.5s ease-in-out;
+            }
+            button{
+                background-color: rgb(241, 242, 243);
+                color: black;
+                border: none;
+                padding: 15px 30px;
+                font-size: 18px;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: background-color 0.5s;
+                margin: 10px;
+            }
+
+            button:hover{
+                background-color: rgb(11, 121, 255)
+        
+            }
+
+
+
+        </style>
+
+            <h1>Click the button</h1>
+            <button id="button">CLICK ME</button>
+
+        <script>
+          const colors = ["lightblue", "lightpink", "lightgreen"]
+          let colorIndex = 0;
+
+          document.getElementById("button").addEventListener("click", () => {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+          })
+        </script>
+
+
+    </body>
+</html>

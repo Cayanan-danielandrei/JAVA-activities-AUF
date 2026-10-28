@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>DOM or DATA OBJECT MODEL</title>
+
+    <body>
+        
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #message{
+                color: dodgerblue;
+                font-weight: bold;
+            }
+            button{
+                margin-top: 10px ;
+            }
+
+
+        </style>
+            <head>
+
+                <body>
+                    <h1 id="title"> WELCOME TO DOM EXAMPLE</h1>
+                    <p id="message">This is the original message</p>
+                    <button id="changeBtn">Change Message</button>
+                    <button id="addBtn">Add New Paragraph</button>
+
+
+            </head>
+        <script>
+
+    // 1. Change the existing message text on button click
+    const changeBtn = document.getElementById('changeBtn');
+    const message = document.getElementById('message');
+
+    changeBtn.addEventListener('click', function() {
+      message.textContent = "The message has been successfully changed using the DOM!";
+    }); 
+
+    // 2. Add a brand new paragraph element on button click
+    const addBtn = document.getElementById('addBtn');
+
+    addBtn.addEventListener('click', function() {
+      // Create a new <p> element
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = "This is a brand new paragraph added dynamically!";
+      newParagraph.style.color = "dodgerblue";
+     
+      // Append the new paragraph to the body of the document
+      document.body.appendChild(newParagraph);
+    });
+
+
+
+
+        </script>
+
+
+
+    </body>
+</html>
