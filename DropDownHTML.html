@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f4ff;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #3344aa;
+        }
+
+        /* Dropdown menu container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown button */
+        button {
+            background: #4455dd;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        button:hover {
+            background: #223399;
+            transform: scale(1.05);
+        }
+
+        /* Dropdown menu */
+        .menu {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 150px;
+            box-shadow: 0 4px 10px #aaa;
+            border-radius: 8px;
+            z-index: 1;
+            left: 8px;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown links */
+        .menu a {
+            display: block;
+            padding: 12px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background: #e0e7ff;
+        }
+
+        /* Show the dropdown menu */
+        .show {
+            display: block;
+            animation: fadeIn 0.4s;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Dropdown Menu</h1>
+    <p>Click the button below to open the menu.</p>
+
+    <!-- Dropdown Menu HTML -->
+    <div class="dropdown">
+
+        <button id="menuButton"
+                aria-expanded="false"
+                aria-controls="myMenu">
+            Open Menu ▼
+        </button>
+
+        <div id="myMenu" class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <script>
+        // 1. Select the button and menu
+        const menuButton = document.getElementById("menuButton");
+        const myMenu = document.getElementById("myMenu");
+
+        // 2. Open or close the menu when the button is clicked
+        menuButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+
+            myMenu.classList.toggle("show");
+
+            // Update accessibility information
+            const isOpen = myMenu.classList.contains("show");
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+
+        // 3. Close the menu when clicking outside
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest(".dropdown")) {
+                myMenu.classList.remove("show");
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        // 4. Close the menu when a link is clicked
+        const menuLinks = myMenu.querySelectorAll("a");
+
+        menuLinks.forEach(function(link) {
+            link.addEventListener("click", function() {
+                myMenu.classList.remove("show");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
+
+</body>
+</html>

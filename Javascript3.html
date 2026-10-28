@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROP DOWN MENU (javascript)</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: rgb(176, 223, 242);
+            padding: 40px;
+        }
+        h1{
+            color: rgb(10, 117, 210);
+        }
+
+        /* DROP DOWN MENU CONTAINER */
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        /* DROPDOWN BUTTON */
+        button{
+            background: aliceblue;
+            color: rgb(5, 1, 1);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        button:hover{
+            background: rgb(186, 231, 233);
+            transform: scale(1.05);
+        }
+        /* Dropdown menu */
+        .menu{
+            display: none;
+            position: absolute;
+            background: rgb(255, 254, 254);
+            min-width: 150px;
+            box-shadow: 0 4px 10px gray;
+            border-radius: 8px;
+            z-index: 1;
+            left: 5px;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        /* Dropdown Link */
+        .menu a{
+            display: block;
+            padding: 12px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .menu a:hover{
+            background: rgb(124, 195, 233);
+
+        }
+
+        /* SHOW DROPDOWN */
+        .show{
+            display: block;
+            animation: fadeIn 0.4s;
+        }
+        /* FADE IN ANIMATION */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } 
+    </style>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("button");
+            const menu = document.getElementById("myMenu");
+
+            button.addEventListener("click", function () {
+                const isOpen = menu.classList.toggle("show");
+                button.setAttribute("aria-expanded", isOpen);
+            });
+        });
+
+    </script>
+
+
+
+
+
+    <h1>My Dropdown Menu</h1>
+    <p>Click the button below to open the menu. </p>
+
+    <div class="dropdown">
+        <button id="button" 
+                aria-expanded="false" 
+                aria-controls="myMenu">
+                Open Menu 
+        </button>
+
+        <div id="myMenu" class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+
+</body>
+</html>
